@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai2</title>
+
+    <script>
+        // Data 1
+        let markKhoiLuong1 = 78;
+        let markChieuCao1 = 1.69;
+        let johnKhoiLuong1 = 92;
+        let johnChieuCao1 = 1.95;
+
+        // Data 2
+        let markKhoiLuong2 = 95;
+        let markChieuCao2 = 1.88;
+        let johnKhoiLuong2 = 85;
+        let johnChieuCao2 = 1.76;
+
+        // Tính chỉ số BMI của Mark và John
+        let markBmi1 = markKhoiLuong1 / (markChieuCao1 ** 2);
+        let johnBmi1 = johnKhoiLuong1 / (johnChieuCao1 ** 2);
+        let markHigherBMI1 = markBmi1 > johnBmi1;
+
+        let markBmi2 = markKhoiLuong2 / (markChieuCao2 ** 2);
+        let johnBmi2 = johnKhoiLuong2 / (johnChieuCao2 ** 2);
+        let markHigherBMI2 = markBmi2 > johnBmi2;
+
+        if (markBmi1 > johnBmi1) {
+            console.log(`Chỉ số BMI của Mark (${markBmi1.toFixed(1)}) cao hơn John (${johnBmi1.toFixed(1)})`);
+        } else if (johnBmi1 > markBmi1) {
+            console.log(`Chỉ số BMI của John (${johnBmi1.toFixed(1)}) cao hơn Mark (${markBmi1.toFixed(1)})`);
+        } else {
+            console.log(`Chỉ số BMI của Mark và John bằng nhau (${markBmi1.toFixed(1)})`);
+        }
+
+        if (markBmi2 > johnBmi2) {
+            console.log(`Chỉ số BMI của Mark (${markBmi2.toFixed(1)}) cao hơn John (${johnBmi2.toFixed(1)})`);
+        } else if (johnBmi2 > markBmi2) {
+            console.log(`Chỉ số BMI của John (${johnBmi2.toFixed(1)}) cao hơn Mark (${markBmi2.toFixed(1)})`);
+        } else {
+            console.log(`Chỉ số BMI của Mark và John bằng nhau (${markBmi2.toFixed(1)})`);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
