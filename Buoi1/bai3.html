@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 3</title>
+</head>
+<body>
+    <script>
+            // Dữ liệu 1
+        const diemDolphins1 = [96, 108, 89];
+        const diemKoalas1 = [88, 91, 110];
+
+        // Dữ liệu Bonus 1
+        const diemDolphinsBonus1 = [97, 112, 101];
+        const diemKoalasBonus1 = [109, 95, 123];
+
+        // Dữ liệu Bonus 2
+        const diemDolphinsBonus2 = [97, 112, 101];
+        const diemKoalasBonus2 = [109, 95, 106];
+
+        function tinhDiemTrungBinh(diem) {
+        const tongDiem = diem.reduce((tong, diem) => tong + diem, 0);
+        return tongDiem / diem.length;
+        }
+
+        function kiemTraNguoiChienThang(dolphins, koalas) {
+        const diemTrungBinhDolphins = tinhDiemTrungBinh(dolphins);
+        const diemTrungBinhKoalas = tinhDiemTrungBinh(koalas);
+
+        if (diemTrungBinhDolphins >= 100 && diemTrungBinhDolphins > diemTrungBinhKoalas) {
+            console.log('Dolphins chiến thắng với điểm trung bình là ${diemTrungBinhDolphins}');
+        } else if (diemTrungBinhKoalas >= 100 && diemTrungBinhKoalas > diemTrungBinhDolphins) {
+            console.log('Koalas chiến thắng với điểm trung bình là ${diemTrungBinhKoalas}');
+        } else if (diemTrungBinhDolphins >= 100 && diemTrungBinhKoalas >= 100 && diemTrungBinhDolphins === diemTrungBinhKoalas) {
+            console.log('Hòa! Cả hai đội đều có điểm trung bình là ${diemTrungBinhDolphins}');
+        } else {
+            console.log("Không có đội nào giành được chiếc cúp");
+        }
+        }
+
+        console.log("Dữ liệu 1:");
+        kiemTraNguoiChienThang(diemDolphins1, diemKoalas1);
+
+        console.log("\nDữ liệu Bonus 1:");
+        kiemTraNguoiChienThang(diemDolphinsBonus1, diemKoalasBonus1);
+
+        console.log("\nDữ liệu Bonus 2:");
+        kiemTraNguoiChienThang(diemDolphinsBonus2, diemKoalasBonus2);
+
+
+    </script>
+</body>
+</html>
